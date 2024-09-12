@@ -16,7 +16,7 @@ if __name__  == "__main__":
     filename = '2018-01-15_16-30-00.644228.txt'
     f = open(filename,'rb')
     bin_data = f.read()
-    print len(bin_data)
+    print(len(bin_data))
     f.close()
     decode_data(bin_data)
 

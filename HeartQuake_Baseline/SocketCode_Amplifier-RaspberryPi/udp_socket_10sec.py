@@ -9,12 +9,10 @@ import numpy as np
 
 PORT     = 5000
 SensorIp = '192.168.31.22'
-# ServerIp = '192.168.31.3'
-#ServerIp = '169.254.5.214'
-# FILEPATH = '/home/pi/'
-FILEPATH = './'
+ServerIp = '192.168.31.3'
+FILEPATH = '/home/pi/'
 
-T_interval     = 5
+T_interval     = 10
 server_socket  = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 server_address = (ServerIp, PORT)
 sensor_address = (SensorIp, PORT)
@@ -136,6 +134,7 @@ if __name__ == "__main__":
     
     config_com = 'c' + chr(0) + chr(0) + chr(4) + chr(0) +chr(16) + chr(39)+chr(GAIN) + chr(0)
     send_data(config_com)
+
     if cmp(receive_data(), 'Co'):
         print 'config success'
         state = state + 1
