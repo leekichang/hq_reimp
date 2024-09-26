@@ -44,7 +44,7 @@ def update_graph(frame):
         plt.ylim([-1,1])
         plt.subplot(2, 1, 2)
         plt.plot(o, linestyle='-')
-        plt.title("Infered data")
+        plt.title("Inferred data")
         plt.xlabel("Sample")
         plt.ylabel("Value")
 
@@ -82,7 +82,7 @@ def start_animation():
 
 # 메인 실행
 if __name__ == "__main__":
-    folder_to_watch = "./data/demo/2024-09-12/"
+    folder_to_watch = "./data/demo/2024-09-13/"
     # 실시간 감지와 애니메이션 병렬 실행
     import threading
     watch_thread = threading.Thread(target=start_watching, args=(folder_to_watch,))
